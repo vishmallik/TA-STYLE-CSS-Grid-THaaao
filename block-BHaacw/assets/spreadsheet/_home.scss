@@ -1,0 +1,114 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+    background-color: rgb(58,74,79);
+}
+.img-container{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    object-fit: cover;
+}
+img{
+    width: 100%;
+}
+.graph-container{
+    width: 50%;
+    margin:  0 auto ;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+.red-bg{
+    background-color: red;
+    color: #fff !important;
+}
+.blue-bg{
+    background-color: rgb(0,149,190);
+    color: #fff;
+    
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    text-align: center;
+    background-color: #fff;
+    margin: 3rem 0;
+    border-top: 3px solid rgb(0,149,190) ;
+    border-radius: 5px;
+   li{
+    padding: 0.5rem 0;
+    &:hover{
+        background-color: rgba(rgb(0,149,190),0.5);
+        a{
+            color: #fff;
+        }
+        
+    }
+   }
+    
+    a{
+        text-decoration: none;
+        color: rgb(0,149,190);
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+header{
+    width: 80%;
+    margin:  0  auto;
+    max-width: 100%;
+}
+h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    
+}
+.container{
+    width: 80%;
+    margin:  0  auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-auto-rows: 210px ;
+    gap:3rem;
+    padding-bottom: 3rem;
+    align-items: stretch;
+    h2,a,p{
+    padding: 1rem;
+    }
+    a{
+        display: block;
+        text-decoration: none;
+        color: red;
+        &:after{
+            content: "...";
+        }
+        
+    }
+}
+.child{
+    background-color: #fff;
+    border-top: 3px solid rgb(0,149,190) ;
+    border-radius: 5px;
+}
+.child2{
+    grid-row: span 3;
+    
+}
+.child4{
+    grid-row: span 2;
+}
+.child{
+    display: grid;
+    align-content: space-between;
+}
