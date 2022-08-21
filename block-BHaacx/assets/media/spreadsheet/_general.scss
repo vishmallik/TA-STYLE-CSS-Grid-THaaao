@@ -1,34 +1,40 @@
-html{
-    font-size: 16px;
+html {
+  font-size: 16px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 }
-*,*::after,*::before{
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.5;
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
 }
-.padding{
-    padding: 4rem;
+.padding {
+  padding: 4rem;
 }
-.accented{
-    color: $accent-primary;
+.accented {
+  color: $accent-primary;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-p{
-    color: $font-color-primary;
+p {
+  color: $font-color-primary;
 }
-.container{
-    width: 80%;
-    max-width: 100%;
-    margin: 0 auto;
+.container {
+  width: 80%;
+  max-width: 100%;
+  margin: 0 auto;
 }
-.flex{
-    display: flex;
-    justify-content: space-between;
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.white{
-    color: #fff;
+.white {
+  color: #fff;
 }
