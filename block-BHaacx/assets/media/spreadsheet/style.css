@@ -1,0 +1,382 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+.padding {
+  padding: 4rem;
+}
+
+.accented {
+  color: rgb(236, 175, 78);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: rgb(154, 154, 154);
+}
+
+.container {
+  width: 80%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.white {
+  color: #fff;
+}
+
+header > a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(22, 22, 22);
+}
+
+header {
+  padding: 2rem 0;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  right: 0;
+}
+header li {
+  margin-left: 3rem;
+}
+header li a {
+  color: rgb(154, 154, 154);
+  font-weight: 600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.hero-text, .hero-img, .about, .exp-img, .exp, .education, .form {
+  grid-column: span 2;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-img {
+  height: 100vh;
+}
+
+.hero-text {
+  background-color: rgb(245, 227, 215);
+  display: grid;
+  align-content: center;
+}
+.hero-text p:first-child {
+  font-weight: 500;
+}
+.hero-text p:not(:first-child) {
+  line-height: 2;
+  margin-bottom: 4rem;
+}
+.hero-text button {
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 3px solid rgb(22, 22, 22);
+}
+.hero-text button a {
+  color: rgb(22, 22, 22);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h1, h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgb(22, 22, 22);
+  margin: 1rem 0;
+}
+h1 strong, h2 strong {
+  font-weight: 500;
+}
+
+h2 {
+  margin: 0.5rem 0;
+}
+
+.about .accented {
+  margin-bottom: 2rem;
+}
+.about p {
+  margin: 1rem 0;
+}
+
+.skills {
+  background-color: rgb(236, 175, 78);
+}
+.skills h2 {
+  color: #fff;
+}
+.skills p {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+progress {
+  width: 100%;
+  border: 0;
+  height: 3px;
+  background-color: black;
+  margin: 0.5rem 0 1rem 0;
+}
+progress::-webkit-progress-value {
+  background-color: #000;
+}
+progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+
+small {
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.skill {
+  text-align: center;
+  color: #fff;
+}
+.skill i {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.skill p {
+  color: #fff;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+.skill-1 {
+  background-color: rgb(236, 175, 78);
+}
+
+.skill-2 {
+  background-color: rgb(252, 104, 62);
+}
+
+.skill-3 {
+  background-color: rgb(22, 22, 22);
+  color: #fff;
+}
+
+.skill-4 {
+  color: #000;
+}
+.skill-4 p {
+  color: #000;
+}
+
+.exp, .education {
+  background-color: rgb(252, 104, 62);
+  color: #fff;
+}
+.exp i, .education i {
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+.exp h3, .education h3 {
+  display: inline-block;
+}
+.exp span, .education span {
+  color: rgb(113, 50, 52);
+  font-weight: 800;
+}
+.exp .flex, .education .flex {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.exp p, .education p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.exp h2, .education h2 {
+  color: #fff;
+}
+.exp p:nth-child(2), .education p:nth-child(2) {
+  margin-bottom: 3rem;
+}
+
+.education {
+  background-color: rgb(236, 175, 78);
+}
+.education span {
+  color: rgb(149, 119, 19);
+}
+
+.form {
+  background-color: rgb(252, 104, 62);
+}
+.form p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.form h2 {
+  color: #fff;
+}
+.form form {
+  width: 100%;
+  margin-top: 2rem;
+}
+.form input, .form textarea {
+  width: 100%;
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  padding: 1rem;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(236, 175, 78);
+  margin-top: 1.5rem;
+}
+.form input::-moz-placeholder, .form textarea::-moz-placeholder {
+  color: #fff;
+}
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form input::placeholder, .form textarea::placeholder {
+  color: #fff;
+}
+.form input:focus, .form textarea:focus {
+  outline: 0;
+}
+.form input[type=submit] {
+  background-color: #fff;
+  color: rgb(22, 22, 22);
+  width: 30%;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: rgb(22, 22, 22);
+  color: #fff;
+}
+.contact address {
+  color: rgb(154, 154, 154);
+  font-size: 1.2rem;
+  line-height: 2;
+  margin: 1rem 0;
+}
+.contact i {
+  margin-right: 1.5rem;
+}
+.contact a {
+  color: rgb(236, 175, 78);
+  font-weight: 300;
+}
+.contact h3:nth-child(3) {
+  margin-top: 4rem;
+}
+
+.map {
+  grid-column: span 4;
+  background-color: rgb(252, 104, 62);
+}
+.map iframe {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.438);
+}
+
+footer {
+  text-align: center;
+  padding: 10rem;
+}
+footer p {
+  margin: 4rem 0;
+  font-size: 1.2rem;
+}
+footer ul {
+  width: 30%;
+  margin: 0 auto;
+}
+footer ul a {
+  color: rgb(154, 154, 154);
+}/*# sourceMappingURL=style.css.map */
