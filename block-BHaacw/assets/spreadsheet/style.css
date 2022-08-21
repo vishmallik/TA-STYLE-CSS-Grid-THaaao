@@ -61,15 +61,15 @@ body {
 .img-container {
   border-radius: 50%;
   overflow: hidden;
-  height: 400px;
-  width: 400px;
   margin: 0 auto;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 380px;
 }
 
 img {
   width: 100%;
+  max-width: 380px;
 }
 
 .graph-container {
@@ -84,6 +84,8 @@ h2 {
 .red-bg {
   background-color: red;
   color: #fff !important;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .blue-bg {
@@ -134,12 +136,14 @@ h1 {
   margin: 0 auto;
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1900px));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
   padding-bottom: 3rem;
   align-items: stretch;
 }
-.container h2, .container a, .container p {
+.container h2,
+.container a,
+.container p {
   padding: 1rem;
 }
 .container a {
@@ -168,4 +172,39 @@ h1 {
 .child {
   display: grid;
   align-content: space-between;
+}
+
+@media screen and (max-width: 1432px) {
+  .child2 {
+    order: 5;
+  }
+  .child3 {
+    order: 1;
+  }
+  .child4 {
+    order: 2;
+  }
+  .child5 {
+    order: 3;
+  }
+  .child6 {
+    order: 4;
+  }
+}
+@media screen and (max-width: 935px) {
+  .child2 {
+    order: 2;
+  }
+  .child3 {
+    order: 3;
+  }
+  .child4 {
+    order: 1;
+  }
+  .child5 {
+    order: 4;
+  }
+  .child6 {
+    order: 6;
+  }
 }/*# sourceMappingURL=style.css.map */
