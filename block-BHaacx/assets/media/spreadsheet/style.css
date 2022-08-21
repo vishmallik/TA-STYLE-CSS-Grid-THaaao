@@ -51,8 +51,15 @@ table {
 html {
   font-size: 16px;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -86,6 +93,7 @@ p {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .white {
@@ -115,12 +123,18 @@ header li a {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   align-items: stretch;
   align-content: stretch;
 }
 
-.hero-text, .hero-img, .about, .exp-img, .exp, .education, .form {
+.hero-text,
+.hero-img,
+.about,
+.exp-img,
+.exp,
+.education,
+.form {
   grid-column: span 2;
 }
 
@@ -148,7 +162,7 @@ img {
   margin-bottom: 4rem;
 }
 .hero-text button {
-  width: 10rem;
+  width: 13rem;
   height: 2.5rem;
   border-radius: 9999px;
   background-color: transparent;
@@ -302,7 +316,8 @@ h3 {
   width: 100%;
   margin-top: 2rem;
 }
-.form input, .form textarea {
+.form input,
+.form textarea {
   width: 100%;
   font-size: 1.3rem;
   color: #fff;
@@ -319,10 +334,12 @@ h3 {
 .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
   color: #fff;
 }
-.form input::placeholder, .form textarea::placeholder {
+.form input::placeholder,
+.form textarea::placeholder {
   color: #fff;
 }
-.form input:focus, .form textarea:focus {
+.form input:focus,
+.form textarea:focus {
   outline: 0;
 }
 .form input[type=submit] {
@@ -357,11 +374,22 @@ h3 {
 .map {
   grid-column: span 4;
   background-color: rgb(252, 104, 62);
+  padding: 4rem 15rem;
+  text-align: center;
 }
-.map iframe {
-  width: 70%;
-  margin: 0 auto;
-  display: block;
+
+.map-container {
+  height: 0;
+  width: 100%;
+  padding-bottom: 33.25%;
+  position: relative;
+}
+.map-container iframe {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
   box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.438);
 }
 
@@ -379,4 +407,91 @@ footer ul {
 }
 footer ul a {
   color: rgb(154, 154, 154);
+}
+
+#toggle,
+.fa-bars {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    width: 95%;
+  }
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .fa-bars {
+    display: inline-block;
+    position: relative;
+    z-index: 9999;
+    color: rgb(236, 175, 78);
+    font-size: 2rem;
+  }
+  nav {
+    display: none;
+  }
+  #toggle:checked ~ nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(236, 175, 78);
+  }
+  #toggle:checked ~ nav ul {
+    flex-direction: column;
+    margin-top: 20%;
+  }
+  #toggle:checked ~ nav li {
+    margin: 2rem 0;
+  }
+  #toggle:checked ~ nav a {
+    font-size: 2rem;
+    color: #fff;
+  }
+  #toggle:checked ~ label > .fa-bars {
+    color: #fff;
+    position: fixed;
+    right: 1.6rem;
+    top: 1.1rem;
+  }
+  header {
+    background-color: #fff;
+    position: relative;
+    padding: 1rem;
+  }
+  .hero-text,
+.hero-img,
+.about,
+.exp-img,
+.exp,
+.education,
+.form,
+.map {
+    grid-column: span 1;
+  }
+  .map {
+    padding: 1rem 0rem;
+  }
+  .map-container {
+    padding-bottom: 56.25%;
+  }
+  .map-container iframe {
+    box-shadow: 0 0 0 0;
+  }
+  footer {
+    text-align: center;
+    padding: 4rem;
+  }
+  footer p {
+    margin: 0 0 2rem 0;
+  }
+  footer ul {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
