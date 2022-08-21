@@ -32,10 +32,8 @@ main {
   grid-column: span 2;
 }
 img {
-  // width: 100%;
   max-width: 100%;
   height: 100%;
-  // height: 900px;
   object-fit: cover;
 }
 .hero-img {
@@ -54,7 +52,7 @@ img {
     margin-bottom: 4rem;
   }
   button {
-    width: 10rem;
+    width: 13rem;
     height: 2.5rem;
     border-radius: 9999px;
     background-color: transparent;
@@ -247,10 +245,21 @@ h3 {
 .map {
   grid-column: span 4;
   background-color: $accent-secondary;
+  padding: 4rem 15rem;
+  text-align: center;
+}
+.map-container {
+  height: 0;
+  width: 100%;
+  padding-bottom: 33.25%;
+  position: relative;
   iframe {
-    width: 70%;
-    margin: 0 auto;
-    display: block;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    // display: block;
     box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.438);
   }
 }
@@ -287,6 +296,8 @@ footer {
     display: inline-block;
     position: relative;
     z-index: 9999;
+    color: $accent-primary;
+    font-size: 2rem;
   }
   nav {
     display: none;
@@ -299,6 +310,7 @@ footer {
     left: 0;
     right: 0;
     background-color: $accent-primary;
+    // overflow: hidden;
     ul {
       flex-direction: column;
       margin-top: 20%;
@@ -311,15 +323,43 @@ footer {
       color: #fff;
     }
   }
+  #toggle:checked ~ label > .fa-bars {
+    color: #fff;
+    position: fixed;
+    right: 1.6rem;
+    top: 1.1rem;
+  }
   header {
     background-color: #fff;
+    position: relative;
+    padding: 1rem;
   }
   .hero-text,
   .hero-img,
   .about,
   .exp-img,
   .exp,
-  .form {
+  .form,
+  .map {
     grid-column: span 1;
+  }
+  .map {
+    padding: 1rem 0rem;
+  }
+  .map-container {
+    padding-bottom: 56.25%;
+    iframe {
+      box-shadow: 0 0 0 0;
+    }
+  }
+  footer {
+    text-align: center;
+    padding: 4rem;
+    p {
+      margin: 0 0 2rem 0;
+    }
+    ul {
+      width: 50%;
+    }
   }
 }
